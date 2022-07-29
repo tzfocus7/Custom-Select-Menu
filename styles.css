@@ -1,0 +1,105 @@
+/* importing google font*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+body{
+    background: #4285f4;
+}
+.wrapper{
+    width: 370px;
+    margin: 130px auto;
+}
+.select-btn, .options li{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.select-btn{ 
+    justify-content: space-between;
+    background: #fff;
+    height: 65px;
+    font-size: 22px;
+    padding: 0 20px;
+    border-radius: 7px;
+}
+.select-btn i{
+    font-size: 31px;
+    transition: transform 0.3s linear;
+}
+.wrapper.active .select-btn i{
+    transform: rotate(-180deg);
+}
+.content{
+    display: none;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 7px;
+    background: #fff;
+}
+.wrapper.active .content{
+    display: block;
+}
+.content .search{
+    position: relative;
+}
+.search i{
+    left: 15px;
+    line-height: 53px;
+    position: absolute;
+    font-size: 20px;
+    color: #999;
+}
+.search input{
+    height: 53px;
+    width: 100%;
+    font-size: 17px;
+    padding: 0 15px 0 43px;
+    outline: none;
+    border: 1px solid #b3b3b3;
+    border-radius: 5px;
+}
+.content .options{
+    margin-top: 10px;
+    max-height: 250px;
+    overflow-y: auto;
+    padding-right: 7px;
+}
+/*scrollbar styling*/
+.options::-webkit-scrollbar{
+    width: 7px;
+}
+.options::-webkit-scrollbar-track{
+    background: #f1f1f1;
+    border-radius: 25px;
+}
+.options::-webkit-scrollbar-thumb{
+    background: #ccc;
+    border-radius: 25px;
+}
+.options li{
+    height: 50px;
+    font-size: 21px;
+    padding: 0 13px;
+}
+.options li:hover{
+    background: #f2f2f2;
+}
+
+@media (max-width: 450px){
+    .wrapper{
+        width: 85%;
+    }
+    .select-btn{ 
+        font-size: 17px;
+    }
+    .select-btn i{
+        font-size: 25px;
+    }
+    .options li{
+        font-size: 17px;
+    }
+}
